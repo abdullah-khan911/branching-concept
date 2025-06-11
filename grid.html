@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e2f;
+      padding: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "sidebar content1"
+        "sidebar content2"
+        "footer footer";
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: auto 0.5fr 1.4fr 1fr;
+      gap: 10px;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background: linear-gradient(to right, #7f00ff, #e100ff);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      border-radius: 8px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: linear-gradient(to bottom, #11998e, #38ef7d);
+      padding: 20px;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+
+    .main {
+      grid-area: main;
+      background: linear-gradient(to right, #36d1dc, #5b86e5);
+      padding: 20px;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+
+    .content1 {
+      background: linear-gradient(to right, #56ccf2, #2f80ed);
+      padding: 20px;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+
+    .content1 {
+      grid-area: content1;
+    }
+
+    .content2 {
+      grid-area: content2;
+      background: linear-gradient(to right,#3030a7,#0909d1);
+    }
+    .footer{
+        grid-area:footer;
+      background: linear-gradient(to right, #4d0d8d, #815a86);
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main</div>
+    <div class="content1">Content 1</div>
+    <div class="content2">Content 2</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
+
+
